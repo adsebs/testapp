@@ -1,0 +1,15 @@
+#content {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-red {
+    color: red;
+}
