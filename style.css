@@ -6,10 +6,6 @@ ul {
     list-style-type: none;
 }
 
-.text-green {
-    color: green;
-}
-
-.text-red {
-    color: red;
+.acc-heading {
+    color: white;
 }

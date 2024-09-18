@@ -8,51 +8,17 @@
     </head>
     <body>
 
-        <div id="app">
+        <div class="container" id="content">
             <div class="container-fluid">
-                <div class="container" id="content">
-
-
-                    <div class="row">
-
-                        <listBook></listBook>
-
-                        <p>
-                            {{ message }}
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-                
-                
+                <div id="app"></div>
             </div>
-
         </div>
 
-        <script>
+        <script type="module">
 
-            let app = {
+            import App from "./components/App.js";
 
-                data() {
-                    return {
-                        message: 'Meatball!'
-                    }
-                },
-
-                components: {
-                    'listBook': {
-                        mounted() {
-                            alert('Mozarella!');
-                        }
-                    }
-                }
-
-            };
-
-            Vue.createApp(app).mount('#app');
+            Vue.createApp(App).mount('#app');
 
         </script>
 
