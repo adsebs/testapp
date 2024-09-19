@@ -17,23 +17,23 @@ export default {
                             {{ tblcol.header }}
                         </td>
                     </tr>
-                    <tr v-for="book in books">
+                    <template v-for="book in books">
+                    <tr v-if="type == book.status">
                         <td> {{ book.title }} </td>
                         <td> {{ book.author }} </td>
                         <td> {{ book.gender }} </td>
-                        <td> {{ book.genre }} </td>
                         <td> {{ book.country }} </td>
+                        <td> {{ book.genre }} </td>
                         <td> {{ book.pages }} </td>
                         <td> {{ book.pubYear }} </td>
                         <td> {{ book.format }} </td>
                         <td> {{ book.dateStart }} </td>
                         <td> {{ book.dateEnd }} </td>
                         <td> {{ book.rating }} </td>
-                        <td><input type="checkbox" v-model="book.reading"></td>
-                        <td><input type="checkbox" v-model="book.tbr"></td>
-                        <td><input type="checkbox" v-model="book.read"></td>
+                        <td> {{ book.status }} </td>
                         <td><input type="checkbox" v-model="book.collection"></td>
                     </tr>
+                    </template>
                   </tbody>
         </table>
 
