@@ -6,17 +6,23 @@ export default {
     },
 
     template: `
-        <accordion :accTypes="accTypes" :accId="bookAccordion"></accordion>
+        <accordion :accTypes="accTypes" :accId="accId" >
+        </accordion>
     `,
+
+    props: {
+        Status: Array
+    },
 
     data() {
         return {
             accTypes: [
-              {htmlId: "readingHead", heading: "Reading", class: "accordion-button bg-warning", dataTarget: "#collapseReading", ariaCont: "collapseReading"},
-              {htmlId: "tbrHead", heading: "TBR", class: "accordion-button bg-danger", dataTarget: "#collapseTbr", ariaCont: "collapseTbr"},
-              {htmlId: "readHead", heading: "Read", class: "accordion-button bg-success", dataTarget: "#collapseRead", ariaCont: "collapseRead"},
-              {htmlId: "collectHead", heading: "Collection", class: "accordion-button bg-primary", dataTarget: "#collapseCollect", ariaCont: "collapseCollect"}
-            ]
+              {htmlId: "readingHead", status: "reading", heading: "Reading", class: "accordion-button bg-warning", dataTarget: "#collapseReading", ariaCont: "collapseReading"},
+              {htmlId: "tbrHead", status: "tbr", heading: "TBR", class: "accordion-button bg-danger", dataTarget: "#collapseTbr", ariaCont: "collapseTbr"},
+              {htmlId: "readHead", status: "read", heading: "Read", class: "accordion-button bg-success", dataTarget: "#collapseRead", ariaCont: "collapseRead"},
+              {htmlId: "collectHead", status: "collection", heading: "Collection", class: "accordion-button bg-primary", dataTarget: "#collapseCollect", ariaCont: "collapseCollect"}
+            ],
+            accId: "bookAccordion"
         }
       }
 }

@@ -9,3 +9,27 @@ ul {
 .acc-heading {
     color: white;
 }
+
+#addBook {
+    margin-top: 30px;
+}
+
+input, select {
+    margin: 5px;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.red-text {
+    color: red;
+}
+
+.yellow-text {
+    color: yellow;
+}
+
+.green-text {
+    color: green;
+}

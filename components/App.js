@@ -1,16 +1,24 @@
-import BookAccordion from "./BookAccordion.js";
+import Books from "./Books.js";
+import AddBook from "./AddBook.js";
 
 export default {
 
     components: {
-        BookAccordion
+        Books,
+        AddBook
     },
 
     template: `
-    
-        <book-accordion></book-accordion>
+        
+        
+        <books></books>
 
-    `
+
+
+        <!--
+        <add-book></add-book>
+        -->
+    `,
     
 
 }
