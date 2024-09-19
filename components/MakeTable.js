@@ -2,8 +2,10 @@
 export default {
 
     template: `
+
+
         <table :class="{
-            'table table-striped': true,
+            'table': true,
             'blue-text': type == 'reading',
             'red-text': type == 'tbr',
             'green-text': type == 'read',
@@ -11,8 +13,8 @@ export default {
         }">
                   <tbody>
                     <tr>
-                        <td v-for="tblCol in tblCols">
-                            {{ tblCol.header }}
+                        <td v-for="tblcol in tblcols">
+                            {{ tblcol.header }}
                         </td>
                     </tr>
                     <tr v-for="book in books">
@@ -34,10 +36,11 @@ export default {
                     </tr>
                   </tbody>
         </table>
+
     `,
 
     props: {
-        tblCols: Array,
+        tblcols: Array,
         books: Array,
         type: {
             type: String,
