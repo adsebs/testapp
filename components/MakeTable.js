@@ -5,11 +5,7 @@ export default {
 
 
         <table :class="{
-            'table': true,
-            'blue-text': type == 'reading',
-            'red-text': type == 'tbr',
-            'green-text': type == 'read',
-            'yellow-text': type == 'collection'
+            'table': true
         }">
                   <tbody>
                     <tr>
@@ -18,7 +14,7 @@ export default {
                         </td>
                     </tr>
                     <template v-for="book in books">
-                    <tr v-if="type == book.status">
+                    <tr v-if="accType.type == book.status">
                         <td> {{ book.title }} </td>
                         <td> {{ book.author }} </td>
                         <td> {{ book.gender }} </td>
@@ -40,6 +36,7 @@ export default {
     `,
 
     props: {
+        accTypes: Array,
         tblcols: Array,
         books: Array,
         type: {
